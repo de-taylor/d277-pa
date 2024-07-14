@@ -20,6 +20,36 @@
         </header>
         <section></section>
         <aside></aside>
+        <aside>
+            <h3>Want to learn more? Let us know!</h3>
+            <form id="contact-form" action="submit.html" method="POST">
+                <p>
+                    <label for="firstName">First Name:</label>
+                    <input name="firstName" type="text" min="1" max="50" width="50" required placeholder="First Name...">
+                </p>
+                <p>
+                    <label for="lastName">Last Name:</label>
+                    <input name="lastName" type="text" min="1" max="100" width="50" required placeholder="Last Name...">
+                </p>
+                <fieldset>
+                    <legend>Email</legend>
+                    <p>Please enter your email in both fields to confirm.</p>
+                    <p>
+                        <label for="email">Email Address:</label>
+                        <input name="email" type="email" min="1" max="150" width="75" required placeholder="someone@example.com">
+                    </p>
+                    <p>
+                        <label for="emailValidation">Confirm Email:</label>
+                        <input name="emailValidation" type="email" min="1" max="150" width="75" required placeholder="someone@example.com">
+                    </p>
+                </fieldset>
+                <label for="question">What can we help with today?</label>
+                <textarea name="question" rows="4" cols="150">Tell a story, ask a question...</textarea>
+
+                <p><input name="submit" type="submit"></p>
+                <p><input name="clear" type="button" value="Clear Form"></p>
+            </form>
+        </aside>
         <footer role="contentinfo">
             <a href="https://github.com/de-taylor/" target="_blank" alt="Link to Dallas Taylor's GitHub page"><img src="images/github-mark-white.png" height="25px" width="25px"></a>
             <p><small>Created by Dallas Taylor</small></p>
