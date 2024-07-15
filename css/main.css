@@ -1,0 +1,435 @@
+/*
+    Color Palette
+    Header/Footer: #052F57
+    Text (on dark): #e4e4e4
+    Background: #C5D5E4
+    Alt 1: #938581
+    Alt 2: #8896AB
+*/
+
+/* Base styles designed for 390x844 device */
+
+/* General Styles
+*****************/
+/*
+BOX MODEL FIX - https://paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* END BOX MODEL FIX */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #C5D5E4;
+    font-family: "Red Hat Display", sans-serif;
+}
+
+#state-body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 2fr 2fr 4fr 2fr;
+    grid-template-areas:
+        "header"
+        "facts"
+        "statemain"
+        "footer";
+}
+
+#city-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 4fr 2fr 1fr;
+    grid-template-areas:
+        "header"
+        "facts"
+        "citymain"
+        "contactform"
+        "footer";
+}
+
+img {
+    display: block;
+    margin: 5px auto;
+    /* max-width: 300px; */
+}
+
+h1 {
+    font-size: 1.6rem;
+    margin-top: 5px;
+    margin-bottom: 1px;
+}
+h2 {
+    font-size: 1rem;
+    margin-top: 1px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 8px 0;
+}
+h4 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 8px 0;
+}
+
+/* Header */
+body > header {
+    /* Grid area for the entire page */
+    grid-area: header;
+
+    /* organize the header */
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #052F57;
+    color: white;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+header > img {
+    width: 50%;
+}
+
+nav {
+    display: inline-block;
+    width: 100%;
+}
+
+nav ul {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav .btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 1px solid white;
+    padding: 15px 22px;
+    background-color: #8896AB;
+    text-decoration: none;
+    color: #052F57;
+    font-weight: 500;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.btn:hover {
+    border: 1px solid white;
+    background-color: #052F57;
+    color: #8896AB;
+    transform: scale(1.10);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Footer */
+#main-footer {
+    grid-area: footer;
+    background-color: #052F57;
+    color: white;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "footerauthor footergithub"
+        "footerlegal footerlegal";
+    justify-content: stretch;
+    align-content: stretch;
+    text-align: center;
+}
+
+#footer-github {
+    grid-area: footergithub;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#footer-attribution {
+    height: 25px;
+    grid-area: footerauthor;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#footer-legal {
+    border-top: 1px solid darkgrey;
+    grid-area: footerlegal;
+    margin-top: 0px;
+    padding-top: 5px;
+}
+
+#footer-legal a {
+    color: white;
+    font-weight: 700;
+}
+
+#footer-legal a:hover {
+    display: inline-block;
+    transform: scale(101%);
+}
+
+/* State Page
+**************/
+/* Section */
+#state-body > section {
+    grid-area: statemain;
+    padding: 5px;
+}
+
+#state-body section figure {
+    margin: 16px 0;
+    padding: 5px;
+    display: block;
+    text-align: center;
+}
+
+#state-body section figure img {
+    width: 100%;
+}
+
+/* Style a table for mobile*/
+table {
+    border: none;
+}
+
+tr {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+        "regionname regionsite"
+        "parks parks"
+        "peoples peoples"
+        "activities activities";
+    text-align: left;
+}
+
+td ul, td ol {
+    margin: 5px 0;
+}
+
+tr td:nth-of-type(1) {
+    grid-area: regionname;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+    background-color: #052F57;
+    color: white;
+    padding: 10px;
+}
+
+tr td:nth-of-type(2) {
+    grid-area: regionsite;
+    border-bottom: 1px solid black;
+    background-color: #052F57;
+    color: white;
+    padding: 10px;
+}
+
+tr td:nth-of-type(2) a {
+    color: white;
+}
+
+tr td:nth-of-type(3) {
+    grid-area: parks;
+}
+
+tr td:nth-of-type(3)::before {
+    content: "State Parks";
+    display: inline-block;
+    background-color: lightgrey;
+    color: #052F57;
+    width: 100%;
+    padding-left: 10px;
+}
+
+tr td:nth-of-type(4) {
+    grid-area: peoples;
+}
+
+tr td:nth-of-type(4)::before {
+    content: "Indigenous Peoples";
+    display: inline-block;
+    background-color: lightgrey;
+    color: #052F57;
+    width: 100%;
+    padding-left: 10px;
+}
+
+tr td:nth-of-type(5) {
+    grid-area: activities;
+}
+
+tr td:nth-of-type(5)::before {
+    content: "Top Things To Do";
+    display: inline-block;
+    background-color: lightgrey;
+    color: #052F57;
+    width: 100%;
+    padding-left: 10px;
+}
+
+/* thead remove from flow, but not gone for accessibility */
+thead {
+    position: fixed;
+    top: 9999px;
+    left: 9999px;
+}
+
+tr {
+    border: 1px solid black;
+}
+
+#mt-regions li {
+    list-style: none;
+}
+
+/* Aside */
+/* Governs the stats aside on all pages */
+aside.statistics {
+    grid-area: facts;
+    padding: 10px;
+    background-color: lightgrey;
+    color: #052F57;
+}
+
+.statistics figure {
+    margin: 16px 0;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    background-color: #938581;
+    color: white;
+}
+
+.statistics figure img {
+    width: 100%;
+}
+
+dl {
+    display: flex;
+    flex-flow: row wrap;
+    border: solid #052F57;
+    border-width: 1px 1px 0 0;
+}
+
+dt {
+    flex-basis: 30%;
+    padding: 2px 4px;
+    background-color: #052F57;
+    color: white;
+    text-align: right;
+}
+dd {
+    flex-basis: 70%;
+    flex-grow: 1;
+    margin: 0;
+    padding: 2px 4px;
+    border-bottom: 1px solid #052F57;
+    text-align: center;
+}
+
+.inner-dl {
+    border: none;
+}
+
+.inner-dl dt {
+    border: none;
+    background-color: lightgrey;
+    flex-basis: 35%;
+    padding: 2px 4px;
+    color: #052F57;
+}
+
+.inner-dl dd {
+    flex-basis: 65%;
+    flex-grow: 1;
+    margin: 0;
+    padding: 2px 4px;
+    border: none;
+}
+
+/* City Pages
+**************/
+/* Section */
+#city-body > section {
+    grid-area: citymain;
+    padding: 5px;
+}
+
+/* Form Aside */
+aside#contact{
+    grid-area: contactform;
+    background-color: lightgrey;
+}
+
+#contact-form {
+    padding: 10px 5px;
+}
+
+#contact-form p {
+    margin: 15px auto;
+    display: flow-root;
+}
+
+label {
+    font-weight: 700;
+    float: left;
+}
+input[type=text], input[type=email] {
+    float: right;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+}
+
+.form-buttons {
+    text-align: right;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    display: inline-block;
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #052F57;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+input[type="submit"]:hover {
+    cursor: pointer;
+    border: 3px solid #052F57;
+    background-color: white;
+    color: #052F57;
+    transform: scale(105%);
+}
+input[type="submit"]:active {
+    transform: scale(95%);
+}

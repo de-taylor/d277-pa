@@ -1,20 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Main page meta-information -->
         <title>Home | Welcome to Montana</title> <!-- Page Title -->
+        <link rel="icon" type="image/x-icon" href="images/Montana-State-Seal.png"> <!-- favicon -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta name="description" content="A presentation of the final project for WGU's D277 course.">
+        <meta name="application-name" content="dtay418 D277 PA">
+        <!-- Google Fonts, Red Hat Display, import all-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+        <!-- Link to main stylesheet -->
+        <link href="css/main.css" rel="stylesheet">
     </head>
-    <body>
-        <header>
-            <img src="images/Montana-State-Seal.png" height="200px" width="200px">
-            <h1>Welcome to Montana</h1>
-            <h2>Big Sky Country Since 1889</h2>
+    <body id="state-body">
+        <header role="banner">
+            <img src="images/Montana-State-Seal.png" alt="The State Seal of Montana">
+            <div class="header-title-subtitle">
+                <h1>Welcome to Montana</h1>
+                <h2>Big Sky Country Since 1889</h2>
+            </div>
             <nav role="navigation">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="helena.html">Helena</a></li>
-                    <li><a href="billings.html">Billings</a></li>
-                    <li><a href="ftpeck.html">Ft. Peck</a></li>
+                    <li><a href="index.html" class="btn">Home</a></li>
+                    <li><a href="helena.html" class="btn">Helena</a></li>
+                    <li><a href="billings.html" class="btn">Billings</a></li>
+                    <li><a href="ftpeck.html" class="btn">Ft. Peck</a></li>
                 </ul>
             </nav>
         </header>
@@ -38,182 +51,189 @@
                 </figcaption>
             </figure>
             <table id="mt-regions">
-                <tr>
-                    <th>Region Name</th>
-                    <th>Region Website</th>
-                    <th>State Parks</th>
-                    <th>Indigenous Peoples</th>
-                    <th>Top 5 Things To Do</th>
-                </tr>
-                <tr>
-                    <td>Southeast Montana</td>
-                    <td><a href="https://southeastmontana.com/" target="_blank">SoutheastMontana.com</a></td>
-                    <td>
-                        <ul>
-                            <li>Chief Plenty Coups State Park</li>
-                            <li>Lake Elmo State Park</li>
-                            <li>Makoshika State Park</li>
-                            <li>Medicine Rocks State Park & Chalk Buttes</li>
-                            <li>Pictograph Cave State Park</li>
-                            <li>Pirogue Island State Park</li>
-                            <li>Rosebud Battlefield State Park</li>
-                            <li>Tongue River Reservoir</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Crow</li>
-                            <li>Northern Cheyenne</li>
-                            <li>Hidatsa</li>
-                            <li>Mandan</li>
-                            <li>Arikara</li>
-                            <li>Sioux</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ol>
-                            <li>Hiking &amp; Camping</li>
-                            <li>Mountain Biking</li>
-                            <li>Kayaking &amp; Canoeing</li>
-                            <li>Birding</li>
-                            <li>Stargazing</li>
-                        </ol>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Missouri River Country</d>
-                    <td><a href="https://missouririvermt.com/" target="_blank">MissouriRiverMt.com</a></td>
-                    <td>
-                        <ul>
-                            <li>Hell Creek Recreation Area</li>
-                            <li>Brush Lake State Park</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Assiniboine</li>
-                            <li>Sioux</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ol>
-                            <li>Follow in the Footsteps of Lewis and Clark</li>
-                            <li>Spend a Day on the Water</li>
-                            <li>Take in the Stillness of Nature</li>
-                            <li>Dig Up a Fossil</li>
-                            <li>Immerse Yourself in Local Culture</li>
-                        </ol>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Central Montana</td>
-                    <td><a href="https://centralmontana.com/" target="_blank">CentralMontana.com</a></td>
-                    <td>
-                        <ul>
-                            <li>Ackley Lake State Park</li>
-                            <li>First Peoples Buffalo Jump State Park</li>
-                            <li>Giant Springs State Park</li>
-                            <li>Giant Springs Trout Hatchery</li>
-                            <li>Sluice Boxes State Park</li>
-                            <li>Smith River State Park</li>
-                            <li>Tower Rock State Park</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Blackfeet</li>
-                            <li>Gros Ventre</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ol>
-                            <li>Hiking &amp; Camping</li>
-                            <li>Mountain Biking</li>
-                            <li>Fishing</li>
-                            <li>Golfing</li>
-                            <li>Horseback Riding</li>
-                        </ol>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Glacier Country</td>
-                    <td><a href="https://glaciermt.com/" target="_blank">GlacierMt.com</a></td>
-                    <td>
-                        <ul>
-                            <li>Glacier National Park</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Kootenai</li>
-                            <li>Pend d'Oreille &amp; Salish</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ol>
-                            <li>Scenic Flight</li>
-                            <li>Camping and Stargazing</li>
-                            <li>Flathead Cherry Picking</li>
-                            <li>Dog Sledding</li>
-                            <li>Live Theatre</li>
-                        </ol>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Southwest Montana</td>
-                    <td><a href="https://southwestmt.com/" target="_blank">SouthwestMt.com</a></td>
-                    <td>
-                        <ul>
-                            <li>Bannack Ghost Town State Park</li>
-                            <li>Lewis &amp; Clark Caverns</li>
-                            <li>Elkhorn Ghost Town State Park</li>
-                            <li>Black Sandy State Park</li>
-                            <li>Clark's Lookout</li>
-                            <li>Lost Creek State Park</li>
-                            <li>Anaconda Smoke Stack</li>
-                            <li>Granite Ghost Town State Park</li>
-                            <li>Beaverhead Rock State Park</li>
-                            <li>Spring Meadow Lake State Park</li>
-                        </ul>
-                    </td>
-                    <td></td>
-                    <td>
-                        <ol>
-                            <li>Hiking &amp; Camping</li>
-                            <li>Visit Hot Springs</li>
-                            <li>Wildlife Watching</li>
-                            <li>Visit Breweries &amp; Distilleries</li>
-                            <li>Visit the Ghost Towns</li>
-                        </ol>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Yellowstone Country</td>
-                    <td><a href="https://www.visityellowstonecountry.com/" target="_blank">VisitYellowstoneCountry.com</a></td>
-                    <td>
-                        <ul>
-                            <li>Yellowstone National Park</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>Crow</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ol>
-                            <li>Visit Yellowstone National Park</li>
-                            <li>Art Walks</li>
-                            <li>Hiking &amp; Backpacking</li>
-                            <li>Rodeos</li>
-                            <li>Scenic Drivers</li>
-                        </ol>
-                    </td>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Region Name</th>
+                        <th>Region Website</th>
+                        <th>State Parks</th>
+                        <th>Indigenous Peoples</th>
+                        <th>Top 5 Things To Do</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Southeast Montana</td>
+                        <td><a href="https://southeastmontana.com/" target="_blank">SoutheastMontana.com</a></td>
+                        <td>
+                            <ul>
+                                <li>Chief Plenty Coups State Park</li>
+                                <li>Lake Elmo State Park</li>
+                                <li>Makoshika State Park</li>
+                                <li>Medicine Rocks State Park & Chalk Buttes</li>
+                                <li>Pictograph Cave State Park</li>
+                                <li>Pirogue Island State Park</li>
+                                <li>Rosebud Battlefield State Park</li>
+                                <li>Tongue River Reservoir</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Crow</li>
+                                <li>Northern Cheyenne</li>
+                                <li>Hidatsa</li>
+                                <li>Mandan</li>
+                                <li>Arikara</li>
+                                <li>Sioux</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ol>
+                                <li>Hiking &amp; Camping</li>
+                                <li>Mountain Biking</li>
+                                <li>Kayaking &amp; Canoeing</li>
+                                <li>Birding</li>
+                                <li>Stargazing</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Missouri River Country</d>
+                        <td><a href="https://missouririvermt.com/" target="_blank">MissouriRiverMt.com</a></td>
+                        <td>
+                            <ul>
+                                <li>Hell Creek Recreation Area</li>
+                                <li>Brush Lake State Park</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Assiniboine</li>
+                                <li>Sioux</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ol>
+                                <li>Follow in the Footsteps of Lewis and Clark</li>
+                                <li>Spend a Day on the Water</li>
+                                <li>Take in the Stillness of Nature</li>
+                                <li>Dig Up a Fossil</li>
+                                <li>Immerse Yourself in Local Culture</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Central Montana</td>
+                        <td><a href="https://centralmontana.com/" target="_blank">CentralMontana.com</a></td>
+                        <td>
+                            <ul>
+                                <li>Ackley Lake State Park</li>
+                                <li>First Peoples Buffalo Jump State Park</li>
+                                <li>Giant Springs State Park</li>
+                                <li>Giant Springs Trout Hatchery</li>
+                                <li>Sluice Boxes State Park</li>
+                                <li>Smith River State Park</li>
+                                <li>Tower Rock State Park</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Blackft</li>
+                                <li>Gros Ventre</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ol>
+                                <li>Hiking &amp; Camping</li>
+                                <li>Mountain Biking</li>
+                                <li>Fishing</li>
+                                <li>Golfing</li>
+                                <li>Horseback Riding</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Glacier Country</td>
+                        <td><a href="https://glaciermt.com/" target="_blank">GlacierMt.com</a></td>
+                        <td>
+                            <ul>
+                                <li>Glacier National Park</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Kootenai</li>
+                                <li>Pend d'Oreille &amp; Salish</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ol>
+                                <li>Scenic Flight</li>
+                                <li>Camping and Stargazing</li>
+                                <li>Flathead Cherry Picking</li>
+                                <li>Dog Sledding</li>
+                                <li>Live Theatre</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Southwest Montana</td>
+                        <td><a href="https://southwestmt.com/" target="_blank">SouthwestMt.com</a></td>
+                        <td>
+                            <ul>
+                                <li>Bannack Ghost Town State Park</li>
+                                <li>Lewis &amp; Clark Caverns</li>
+                                <li>Elkhorn Ghost Town State Park</li>
+                                <li>Black Sandy State Park</li>
+                                <li>Clark's Lookout</li>
+                                <li>Lost Creek State Park</li>
+                                <li>Anaconda Smoke Stack</li>
+                                <li>Granite Ghost Town State Park</li>
+                                <li>Beaverhead Rock State Park</li>
+                                <li>Spring Meadow Lake State Park</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Shared Hunting Ground</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ol>
+                                <li>Hiking &amp; Camping</li>
+                                <li>Visit Hot Springs</li>
+                                <li>Wildlife Watching</li>
+                                <li>Visit Breweries &amp; Distilleries</li>
+                                <li>Visit the Ghost Towns</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Yellowstone Country</td>
+                        <td><a href="https://www.visityellowstonecountry.com/" target="_blank">VisitYellowstoneCountry.com</a></td>
+                        <td>
+                            <ul>
+                                <li>Yellowstone National Park</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ul>
+                                <li>Crow</li>
+                            </ul>
+                        </td>
+                        <td>
+                            <ol>
+                                <li>Visit Yellowstone National Park</li>
+                                <li>Art Walks</li>
+                                <li>Hiking &amp; Backpacking</li>
+                                <li>Rodeos</li>
+                                <li>Scenic Drivers</li>
+                            </ol>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
-
         </section>
-        <aside role="aside">
+        <aside class="statistics" role="complementary">
             <h3>Montana at a Glance</h3>
             <figure>
                 <img src="images/Montana-State-Flag.webp" alt="The official state flag of Montana, the state seal on blue with the name written in gold above the seal">
@@ -229,18 +249,18 @@
                 <dd>November 8th, 1889 (41st State)</dd>
                 <dt>State Population</dt>
                 <dd>
-                    <dl>
+                    <dl class="inner-dl">
                         <dt>Total</dt>
                         <dd>1,122,867 (43rd)</dd>
                         <dt>Density</dt>
-                        <dd>7.09 people/square mile (48th)</dd>
+                        <dd>7.09 people/sq mi (48th)</dd>
                     </dl>
                 </dd>
                 <dt>Median Household Income</dt>
                 <dd>&dollar;56,539 (40th)</dd>
                 <dt>Time Zone</dt>
                 <dd>
-                    <dl>
+                    <dl class="inner-dl">
                         <dt><abbr title="Mountain Standard Time">MST</abbr></dt>
                         <dd>UTC-07:00 (November to March)</dd>
                         <dt><abbr title="Mountain Daylight Savings Time">MDT</abbr></dt>
@@ -249,18 +269,18 @@
                 </dd>
                 <dt>Area</dt>
                 <dd>
-                    <dl>
+                    <dl class="inner-dl">
                         <dt>Total</dt>
-                        <dd>147,040 square miles</dd>
+                        <dd>147,040 sq mi</dd>
                         <dt>Land</dt>
-                        <dd>145,552 square miles</dd>
+                        <dd>145,552 sq mi</dd>
                         <dt>Water</dt>
-                        <dd>1,491 square miles</dd> 
+                        <dd>1,491 sq mi</dd> 
                     </dl>
                 </dd>
                 <dt>Elevation</dt>
                 <dd>
-                    <dl>
+                    <dl class="inner-dl">
                         <dt>Average</dt>
                         <dd>3,400 ft</dd>
                         <dt>Highest</dt>
@@ -271,7 +291,7 @@
                 </dd>
                 <dt>State Symbols</dt>
                 <dd>
-                    <dl>
+                    <dl class="inner-dl">
                         <dt>Bird</dt> 
                         <dd>Western Meadowlark</dd>
                         <dt>Butterfly</dt> 
@@ -284,17 +304,18 @@
                         <dd>Bitterroot</dd>
                         <dt>Tree</dt> 
                         <dd>Ponderosa Pine</dd>
-                        <dt>Gemstone</dt> 
+                        <dt>Gemstone</dt>
                         <dd>Sapphire, Agate</dd>
                     </dl>
                 </dd>
             </dl>
         </aside>
-        <footer role="contentinfo">
-            <a href="https://github.com/de-taylor/" target="_blank" alt="Link to Dallas Taylor's GitHub page"><img src="images/github-mark-white.png" height="25px" width="25px"></a>
-            <p><small>Created by Dallas Taylor</small></p>
-            <p><small>This site was created for D277 Frontend Web Development at Western Governors University. This site may not be reproduced in whole or in part for the purpose of fulfilling this course's project, except as submitted by the named student. Otherwise, this site is released under an <a href="LICENSE" target="_blank"><abbr title="Massachusetts Institute of Technology">MIT</abbr> license</a>. To learn more about this license, please review <a href="https://web.mit.edu/Saltzer/www/publications/MITLicense.pdf" target="_blank">&quot;The Origin of the &apos;MIT License&apos;&quot; by Jerome H. Saltzer</a> of <abbr title="Massachusetts Institute of Technology">MIT</abbr>.</small></p>
-            <p><small>Last updated: <time datetime="2024-07-13">July 13th, 2024</time></small></p>
+        <footer role="contentinfo" id="main-footer">
+            <p id="footer-github">
+                <a href="https://github.com/de-taylor/" target="_blank" alt="Link to Dallas Taylor's GitHub page"><img src="images/github-mark-white.png" height="25px" width="25px"></a>
+            </p>
+            <p id="footer-attribution"><small>&copy; Created by Dallas Taylor</small></p>
+            <p id="footer-legal"><small>This site was created for D277 Frontend Web Development at Western Governors University. This site may not be reproduced in whole or in part for the purpose of fulfilling this course's project, except as submitted by the named student. Otherwise, this site is released under an <a href="LICENSE" target="_blank"><abbr title="Massachusetts Institute of Technology">MIT</abbr> license</a>. To learn more about this license, please review <a href="https://web.mit.edu/Saltzer/www/publications/MITLicense.pdf" target="_blank">&quot;The Origin of the &apos;MIT License&apos;&quot; by Jerome H. Saltzer</a> of <abbr title="Massachusetts Institute of Technology">MIT</abbr>.</small></p>
         </footer>
     </body>
 </html>
