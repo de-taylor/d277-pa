@@ -2,7 +2,8 @@
 <html lang="en-US" dir="ltr">
     <head>
         <!-- Main page meta-information -->
-        <title>Fort Peck | Fort Peck Reservoir and Dam</title> <!-- Page Title -->
+        <!-- Section A1: Page Title -->
+        <title>Fort Peck | Fort Peck Reservoir and Dam</title>
         <link rel="icon" type="image/x-icon" href="images/Montana-State-Seal.png"> <!-- favicon -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
@@ -14,15 +15,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         <!-- Link to main stylesheet -->
         <link href="css/main.css" rel="stylesheet">
+        <!-- Link to main script -->
+         <script src="scripts/main.js" defer></script>
     </head>
     <body id="city-body">
+        <!-- Section A2: Header -->
         <header role="banner">
+            <!-- Section A1: Relevant Page Image -->
             <img src="images/USACE-Logo.svg" alt="United States Army Corps of Engineers logo" style="border:3px solid white; border-radius: 25px;">
             <div class="header-title-subtitle">
                 <h1>Welcome to Montana</h1>
                 <h2>Big Sky Country Since 1889</h2>
             </div>
+            <!-- Section A1: Main Navigation Menu -->
+            <!-- Section A2: Nav -->
             <nav role="navigation">
+                <!-- Section B: Unordered List -->
                 <ul>
                     <li><a href="index.html" class="btn">Home</a></li>
                     <li><a href="helena.html" class="btn">Helena</a></li>
@@ -31,6 +39,7 @@
                 </ul>
             </nav>
         </header>
+        <!-- Section A2: Section -->
         <section role="main">
             <h3>About Fort Peck</h3>
             <p>Fort Peck was originally established as a trading post by its namesake Colonel Campell K. Peck and his partner Commander E.H. Durfee in 1867. Its original purpose was to facilitate the fur trade with the Assiniboine and Sioux tribes to the north, but over time it gained a post office and other amenities.</p>
@@ -38,19 +47,24 @@
             <p>Rather than remaining purely utilitarian, the town has gained a reputation as a popular recreation spot, as locals and visitors flock to Fort Peck lake for boating, kayaking, fishing, hiking, camping, and cooking outdoors.</p>
             <p>To learn more about the history of the area, visitors are welcome at the Fort Peck Interpretive Center, and can even visit the lobby of the power plant at the Dam to learn more about its construction and history.</p>
         </section>
+        <!-- Section A2: Aside -->
         <aside role="complementary" aria-label="city-statistics" class="statistics">
             <h3>Fort Peck at a Glance</h3>
             <h4>Home of the Fort Peck Reservior and Dam</h4>
             <figure>
+                <!-- Section A1: Relevant Page Image -->
                 <img src="images/FtPeck-MT-Reservoir.jpg" width="200px" alt="Aerial view of the power plant and visitor center at Fort Peck Reservoir and Dam">
                 <figcaption>
                     <p>An aerial view of the power plant and visitor center of the Fort Peck Reservoir and Dam.</p>
+                    <!-- Section B: External Link -->
                     <footer><cite>Source: <a href="https://www.visitmt.com/listings/general/dam/fort-peck-dam-and-power-plant-museum" target="_blank">https://www.visitmt.com/</a>. Accessed July 13th, 2024</cite></footer>
                 </figcaption>
             </figure>
             <dl>
+                <!-- Section A: Incorporation -->
                 <dt>Date of Incorporation</dt>
                 <dd>1934</dd>
+                <!-- Section A: City Population -->
                 <dt>City Population</dt>
                 <dd>
                     <dl class="inner-dl">
@@ -60,12 +74,15 @@
                         <dd>267.64/sq mi</dd>
                     </dl>
                 </dd>
+                <!-- Section A: Income -->
                 <dt>Median Household income</dt>
                 <dd>&dollar;76,071 (34.5% higher than state median)</dd>
                 <dt>County</dt>
                 <dd>Valley</dd>
+                <!-- Section A: Region -->
                 <dt>Region</dt>
                 <dd>Missouri River Country</dd>
+                <!-- Section A: Classification -->
                 <dt>Classification</dt>
                 <dd>Rural</dd>
                 <dt>Area</dt>
@@ -85,28 +102,35 @@
         </aside>
         <aside role="complementary" aria-label="contact-form" id="contact">
             <h3>Questions or comments? We'd love to hear from you!</h3>
+            <!-- Section D: Form -->
+            <div id="submission-warning">Form not submitted: The emails did not match.</div>
+            <div id="submission-success">Form submitted, thank you for reaching out!</div>
             <form id="contact-form" action="submit.html" method="POST" role="form">
-                <p>
+                <div class="short-question">
+                    <!-- Section D: Form First Name -->
                     <label for="firstName">First Name:</label>
                     <input id="firstName" name="firstName" type="text" min="1" max="50" size="30" required placeholder="First Name..." autocomplete="on">
-                </p>
-                <p>
+                </div>
+                <div class="short-question">
+                    <!-- Section D: Form Last Name -->
                     <label for="lastName">Last Name:</label>
                     <input id="lastName" name="lastName" type="text" min="1" max="100" size="30" required placeholder="Last Name..." autocomplete="on">
-                </p>
-                <p>
+                </div>
+                <div class="short-question">
+                    <!-- Section D: Form Email -->
                     <label for="email">Email Address:</label>
                     <input id="email" name="email" type="email" min="1" max="150" size="30" required placeholder="someone@example.com" autocomplete="on">
-                </p>
-                <p>
+                </div>
+                <div class="short-question">
+                    <!-- Section D: Form Email Validation -->
                     <label for="emailValidation">Confirm Email:</label>
                     <input id="emailValidation" name="emailValidation" type="email" min="1" max="150" size="30" required placeholder="someone@example.com">
-                </p>
-                </fieldset>
-                <p>
-                    <label for="question">Submission Comments</label>
+                </div>
+                <div class="long-question">
+                    <!-- Section D: Form textarea -->
+                    <label for="question">Question or Comments</label>
                     <textarea id="question" title="question" placeholder="Tell a story, ask a question..." name="question" rows="4" cols="25"></textarea>
-                </p>
+                </div>
 
                 <div class="form-buttons">
                     <input name="submit" type="submit">
@@ -115,9 +139,11 @@
         </aside>
         <footer role="contentinfo" id="main-footer">
             <p id="footer-github">
+                <!-- Section B: External Link -->
                 <a href="https://github.com/de-taylor/" target="_blank" alt="Link to Dallas Taylor's GitHub page"><img src="images/github-mark-white.png" height="25px" width="25px"></a>
             </p>
             <p id="footer-attribution"><small>&copy; Created by Dallas Taylor</small></p>
+            <!-- Section B: External Links -->
             <p id="footer-legal"><small>This site was created for D277 Frontend Web Development at Western Governors University. This site may not be reproduced in whole or in part for the purpose of fulfilling this course's project, except as submitted by the named student. Otherwise, this site is released under an <a href="LICENSE" target="_blank"><abbr title="Massachusetts Institute of Technology">MIT</abbr> license</a>. To learn more about this license, please review <a href="https://web.mit.edu/Saltzer/www/publications/MITLicense.pdf" target="_blank">&quot;The Origin of the &apos;MIT License&apos;&quot; by Jerome H. Saltzer</a> of <abbr title="Massachusetts Institute of Technology">MIT</abbr>.</small></p>
         </footer>
     </body>

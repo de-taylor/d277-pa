@@ -2,7 +2,8 @@
 <html lang="en-US" dir="ltr">
     <head>
         <!-- Main page meta-information -->
-        <title>Helena | Capital of Montana</title> <!-- Page Title -->
+        <!-- Section A1: Page Title -->
+        <title>Helena | Capital of Montana</title>
         <link rel="icon" type="image/x-icon" href="images/Montana-State-Seal.png"> <!-- favicon -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="utf-8">
@@ -14,15 +15,22 @@
         <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
         <!-- Link to main stylesheet -->
         <link href="css/main.css" rel="stylesheet">
+        <!-- Link to main script -->
+        <script src="scripts/main.js" defer></script>
     </head>
     <body id="city-body">
+        <!-- Section A2: Header -->
         <header role="banner">
+            <!-- Section A1: Relevant Page Image -->
             <img src="images/Helena-MT-Logo2.jpg" alt="The logo of the city of Helena, Montana" style="border: 3px solid white; border-radius: 100px;">
             <div class="header-title-subtitle">
                 <h1>Welcome to Montana</h1>
                 <h2>Big Sky Country Since 1889</h2>
             </div>
+            <!-- Section A1: Main Navigation Menu -->
+            <!-- Section A2: Nav -->
             <nav role="navigation">
+                <!-- Section B: Unordered List -->
                 <ul>
                     <li><a href="index.html" class="btn">Home</a></li>
                     <li><a href="helena.html" class="btn">Helena</a></li>
@@ -31,25 +39,31 @@
                 </ul>
             </nav>
         </header>
+        <!-- Section A2: Section -->
         <section role="main">
             <h3>About Helena</h3>
             <p>As the capital of Montana, Helena is known as the "Queen City of the Rockies". It was established first as a gold camp during the Montana gold rush in the 1850's, and by 1888 had approximately 50 millionaires. Helena was made the capital of the Montana territory in 1875, and when Montana was incorporated into the United States in 1889, it was kept as the state Capital.</p>
             <p>Helena was a famous stop on Lewis and Clark's expedition after the Louisiana purchase, and the culture of the city revolves around their journey.</p>
             <p>Helena's official symbol is "The Guardian of the Gulch", seen in their official logo. This was a wooden fire tower built in the 1870s originally, and rebuilt in 1886. It stood on Tower Hill, overlooking downtown Helena until August 2nd, 2016 when it was damanged by arson and declared structurally unsound. There are currently plans to rebuild "The Guardian" using original construction methods as a monument to its service.</p>
         </section>
+        <!-- Section A2: Aside -->
         <aside role="complementary" aria-label="city-statistics" class="statistics">
             <h3>Helena at a Glance</h3>
             <h4>State Capital of Montana</h4>
             <figure>
+                <!-- Section A1: Relevant Page Image -->
                 <img src="images/Helena-MT-background-image.png" alt="Aerial view of Helena with mountains in the background">
                 <figcaption>
                     <p>An aerial view of Helena, MT with mountains in the background.</p>
+                    <!-- Section B: External Link -->
                     <footer><cite>Source: <a href="https://helenamt.gov/" target="_blank">helenamt.gov</a>. Accessed July 13th, 2024</cite></footer>
                 </figcaption>
             </figure>
             <dl>
+                <!-- Section A: Incorporation -->
                 <dt>Date of Incorporation</dt>
                 <dd>October 30th, 1864</dd>
+                <!-- Section A: City Population -->
                 <dt>City Population</dt>
                 <dd>
                     <dl class="inner-dl">
@@ -61,12 +75,15 @@
                         <dd>1,908.38/sq mi</dd>
                     </dl>
                 </dd>
+                <!-- Section A: Income -->
                 <dt>Median Household income</dt>
                 <dd>&dollar;50,889 (10% lower than state median)</dd>
                 <dt>County</dt>
                 <dd>Lewis and Clark</dd>
+                <!-- Section A: Region -->
                 <dt>Region</dt>
                 <dd>Southwest Montana</dd>
+                <!-- Section A: Classification -->
                 <dt>Classification</dt>
                 <dd>Urban</dd>
                 <dt>Area</dt>
@@ -88,28 +105,35 @@
         </aside>
         <aside role="complementary" aria-label="contact-form" id="contact">
             <h3>Questions or comments? We'd love to hear from you!</h3>
+            <!-- Section D: Form -->
+            <div id="submission-warning">Form not submitted: The emails did not match.</div>
+            <div id="submission-success">Form submitted, thank you for reaching out!</div>
             <form id="contact-form" action="submit.html" method="POST" role="form">
-                <p>
+                <div class="short-question">
+                    <!-- Section D: Form First Name -->
                     <label for="firstName">First Name:</label>
                     <input id="firstName" name="firstName" type="text" min="1" max="50" size="30" required placeholder="First Name..." autocomplete="on">
-                </p>
-                <p>
+                </div>
+                <div class="short-question">
+                    <!-- Section D: Form Last Name -->
                     <label for="lastName">Last Name:</label>
                     <input id="lastName" name="lastName" type="text" min="1" max="100" size="30" required placeholder="Last Name..." autocomplete="on">
-                </p>
-                <p>
+                </div>
+                <div class="short-question">
+                    <!-- Section D: Form Email -->
                     <label for="email">Email Address:</label>
                     <input id="email" name="email" type="email" min="1" max="150" size="30" required placeholder="someone@example.com" autocomplete="on">
-                </p>
-                <p>
+                </div>
+                <div class="short-question">
+                    <!-- Section D: Form Email Validation -->
                     <label for="emailValidation">Confirm Email:</label>
                     <input id="emailValidation" name="emailValidation" type="email" min="1" max="150" size="30" required placeholder="someone@example.com">
-                </p>
-                </fieldset>
-                <p>
-                    <label for="question">Submission Comments</label>
+                </div>
+                <div class="long-question">
+                    <!-- Section D: Form textarea -->
+                    <label for="question">Question or Comments</label>
                     <textarea id="question" title="question" placeholder="Tell a story, ask a question..." name="question" rows="4" cols="25"></textarea>
-                </p>
+                </div>
 
                 <div class="form-buttons">
                     <input name="submit" type="submit">
@@ -118,9 +142,11 @@
         </aside>
         <footer role="contentinfo" id="main-footer">
             <p id="footer-github">
+                <!-- Section B: External Link -->
                 <a href="https://github.com/de-taylor/" target="_blank" alt="Link to Dallas Taylor's GitHub page"><img src="images/github-mark-white.png" height="25px" width="25px"></a>
             </p>
             <p id="footer-attribution"><small>&copy; Created by Dallas Taylor</small></p>
+            <!-- Section B: External Links -->
             <p id="footer-legal"><small>This site was created for D277 Frontend Web Development at Western Governors University. This site may not be reproduced in whole or in part for the purpose of fulfilling this course's project, except as submitted by the named student. Otherwise, this site is released under an <a href="LICENSE" target="_blank"><abbr title="Massachusetts Institute of Technology">MIT</abbr> license</a>. To learn more about this license, please review <a href="https://web.mit.edu/Saltzer/www/publications/MITLicense.pdf" target="_blank">&quot;The Origin of the &apos;MIT License&apos;&quot; by Jerome H. Saltzer</a> of <abbr title="Massachusetts Institute of Technology">MIT</abbr>.</small></p>
         </footer>
     </body>
